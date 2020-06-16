@@ -1,0 +1,327 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+
+/* Font-style */
+@font-face {
+  font-family: 'DaxlinePro';
+  src: url('/fonts/DaxlinePro-Light.eot');
+  src: local('/fonts/DaxlinePro-Light'),
+    url('/fonts/DaxlinePro-Light.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/DaxlinePro-Light.woff') format('woff'),
+    url('/fonts/DaxlinePro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DaxlinePro';
+  src: url('/fonts/DaxlinePro-ExtraBold.eot');
+  src: local('/fonts/DaxlinePro-ExtraBold'),
+    url('/fonts/DaxlinePro-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/DaxlinePro-ExtraBold.woff') format('woff'),
+    url('/fonts/DaxlinePro-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DaxlinePro';
+  src: url('/fonts/DaxlinePro-Bold.eot');
+  src: local('/fonts/DaxlinePro-Bold'),
+    url('/fonts/DaxlinePro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/DaxlinePro-Bold.woff') format('woff'),
+    url('/fonts/DaxlinePro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DaxlinePro';
+  src: url('/fonts/DaxlinePro-Regular.eot');
+  src: local('/fonts/DaxlinePro-Regular'),
+    url('/fonts/DaxlinePro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/DaxlinePro-Regular.woff') format('woff'),
+    url('/fonts/DaxlinePro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit; } */
+
+/* Slick SLider */
+
+.slick-initialized.slick-slider {
+  display: flex;
+}
+
+button.slick-arrow.slick-prev {
+  content: "";
+
+}
+
+/* End of Slick SLider */
+
+
+/*--------------------*/
+body {
+  font-family: Lato;
+}
+
+.header {}
+
+.header__logo {}
+
+.header__logo:last-child {}
+
+
+/* Speaker - 2 Block */
+.speaker {
+  max-width: 1607px;
+  margin: 0 auto;
+  margin-bottom: 244px;
+}
+
+.speaker__title {
+  color: #004f72;
+  font-family: "DaxlinePro";
+  font-weight: 800;
+  font-style: normal;
+  font-size: 71px;
+  /* line-height: 176.15px; */
+  /* line-height: 0; */
+  margin-bottom: 123px;
+  letter-spacing: 1.11px;
+}
+
+.speaker__slider {}
+
+.speaker__item {}
+
+.speaker__text {}
+
+.speaker__text-title {}
+
+.speaker__text-subtext {}
+
+
+/* Events - 3 Block */
+.events {
+  max-width: 1607px;
+  margin: 0 auto;
+  margin-bottom: 311px;
+}
+
+.events__title {
+  width: 904px;
+  color: #004f72;
+  font-family: 'DaxlinePro';
+  font-weight: 800;
+  font-style: normal;
+  font-size: 71px;
+  /* line-height: 85.04px; */
+  letter-spacing: 1.48px;
+}
+
+.events__slider {}
+
+.events__item {}
+
+.events__info {}
+
+
+/* Info about connection */
+.information-connection {
+  /* Block info */
+  display: block;
+  background-image: url('/img/icons/block_connection.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 897px;
+  height: 110px;
+  /* Text */
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 338px;
+  color: #004f72;
+  font-family: "DaxlinePro";
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 115.88px;
+}
+
+/* End of Info about connection */
+
+
+/* Description - 4 Block */
+.description {
+  background-image: url('/img/background/bg_description.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* height: 1076px; */
+}
+
+.description__title {
+  display: block;
+  color: #ffffff;
+  font-family: "DaxlinePro";
+  font-size: 71px;
+  font-weight: 700;
+  line-height: 45.41px;
+  letter-spacing: 3.4px;
+  font-size: 31px;
+  letter-spacing: 1.46px;
+  padding-top: 171px;
+  padding-bottom: 64px;
+  margin: 0 auto 0 13%;
+}
+
+.description__about {
+  max-width: 667px;
+  margin: 0 auto 0 13%;
+}
+
+.description__text {
+  color: #ffffff;
+  font-family: "DaxlinePro";
+  font-size: 24px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 35.43px;
+  letter-spacing: 0.59px;
+}
+
+.description__text.margin {
+  margin-top: 67px;
+}
+
+.description__instruction {
+  margin-top: 196px;
+  font-family: "DaxlinePro";
+  color: #ffffff;
+  letter-spacing: 1.27px;
+  font-size: 16px;
+  line-height: 23.88px;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.description__color {
+  font-size: 20px;
+  text-indent: -20px;
+  display: table-row;
+  position: absolute;
+}
+
+.description__color,
+.href__green {
+  color: #b2d234;
+  font-family: "DaxlinePro";
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Contacts - 5 Block */
+.contacts {}
+
+.contacts__block {}
+
+.contacts__title {}
+
+.contacts__phone {}
+
+.contacts__text {}
+
+.href__green {}
+
+
+/* Footer */
+.footer {}
+
+.footer__img {}
+
+.footer__info {}
+
+.href-green {}
