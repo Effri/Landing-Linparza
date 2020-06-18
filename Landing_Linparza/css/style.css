@@ -1,48 +1,47 @@
 @charset "UTF-8";
-/*Обнуление*/
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
 
 /* Font-style */
+
 @font-face {
   font-family: 'DaxlinePro';
-  src: url('/fonts/DaxlinePro-Light.eot');
-  src: local('/fonts/DaxlinePro-Light'),
-    url('/fonts/DaxlinePro-Light.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/DaxlinePro-Light.woff') format('woff'),
-    url('/fonts/DaxlinePro-Light.ttf') format('truetype');
+  src: url('DaxlinePro-Light.eot');
+  src: local('DaxlinePro-Light'),
+    url('DaxlinePro-Light.eot?#iefix') format('embedded-opentype'),
+    url('DaxlinePro-Light.woff') format('woff'),
+    url('DaxlinePro-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DaxlinePro';
-  src: url('/fonts/DaxlinePro-ExtraBold.eot');
-  src: local('/fonts/DaxlinePro-ExtraBold'),
-    url('/fonts/DaxlinePro-ExtraBold.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/DaxlinePro-ExtraBold.woff') format('woff'),
-    url('/fonts/DaxlinePro-ExtraBold.ttf') format('truetype');
+  src: url('DaxlinePro-ExtraBold.eot');
+  src: local('DaxlinePro-ExtraBold'),
+    url('DaxlinePro-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('DaxlinePro-ExtraBold.woff') format('woff'),
+    url('DaxlinePro-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DaxlinePro';
-  src: url('/fonts/DaxlinePro-Bold.eot');
-  src: local('/fonts/DaxlinePro-Bold'),
-    url('/fonts/DaxlinePro-Bold.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/DaxlinePro-Bold.woff') format('woff'),
-    url('/fonts/DaxlinePro-Bold.ttf') format('truetype');
+  src: url('DaxlinePro-Bold.eot');
+  src: local('DaxlinePro-Bold'),
+    url('DaxlinePro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('DaxlinePro-Bold.woff') format('woff'),
+    url('DaxlinePro-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DaxlinePro';
-  src: url('/fonts/DaxlinePro-Regular.eot');
-  src: local('/fonts/DaxlinePro-Regular'),
-    url('/fonts/DaxlinePro-Regular.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/DaxlinePro-Regular.woff') format('woff'),
-    url('/fonts/DaxlinePro-Regular.ttf') format('truetype');
+  src: url('DaxlinePro-Regular.eot');
+  src: local('DaxlinePro-Regular'),
+    url('DaxlinePro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('DaxlinePro-Regular.woff') format('woff'),
+    url('DaxlinePro-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -80,8 +79,8 @@ aside {
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+  /* height: 100%;
+  width: 100%; */
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
@@ -126,10 +125,6 @@ img {
   vertical-align: top;
 }
 
-/* h1, h2, h3, h4, h5, h6 {
-  font-size: inherit;
-  font-weight: inherit; } */
-
 /* Slick SLider */
 
 .slick-initialized.slick-slider {
@@ -138,94 +133,330 @@ img {
 
 button.slick-arrow.slick-prev {
   content: "";
+}
 
+/* .speaker__item .slick-list.draggable {
+  width: 1299px !important;
+} */
+
+.speaker__slider.slick-initialized.slick-slider {
+  /* width: 1680px !important; */
+  /* margin-left: -45px; */
+}
+
+.speaker__item.slick-slide.slick-current.slick-active {
+  /* width: 795px !important; */
+
+}
+
+/*.speaker__item.slick-slide {*/
+/*      width: 730px !important;*/
+/*}*/
+
+.slick-list.draggable {
+  height: 500px;
+}
+
+
+.prev {
+  align-self: center;
+}
+
+.next {
+  align-self: center;
+}
+
+.prev.speaker {
+  margin-right: 180px;
+}
+
+.next.speaker {
+  margin-left: 180px;
+}
+
+.prev.events {
+  margin-right: 60px;
+}
+
+.next.events {
+  margin-left: 60px;
 }
 
 /* End of Slick SLider */
 
-
 /*--------------------*/
 body {
-  font-family: Lato;
+  font-family: "DaxlinePro";
 }
 
-.header {}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+}
 
-.header__logo {}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
 
-.header__logo:last-child {}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 576px) {
+
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1170px;
+  }
+}
+
+.view {
+  /*background-image: url('https://moovieer.com/wp-content/uploads/bg_view.png');*/
+  /*!* background-repeat: no-repeat; *!*/
+  /*z-index: -1;*/
+  /*top: 0;*/
+  /*left: 0;*/
+	/*height: 100vh;*/
+}
+
+
+.bg__view::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://moovieer.com/wp-content/uploads/bg_view.png');
+	background-repeat: no-repeat;
+	/* bottom: 0px; */
+	 background-position: bottom;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	background-size: 100%;
+}
+
+
+.view__title {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 32px;
+  width: 1200px;
+  color: #ffffff;
+  font-size: 43px;
+  font-weight: 400;
+  line-height: 55.02px;
+  letter-spacing: 0.95px;
+}
+
+.view__btn_flex {
+  display: flex;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.header {
+  padding-top: 42px;
+}
+
+.header__logo {
+  display: contents;
+}
+
+
+
+.header .header__logo:last-child {
+  display: block;
+  float: right;
+}
+
+.view__video-btn {
+  display: flex;
+}
+
+.view__btn_open {
+  background-image: url('https://moovieer.com/wp-content/uploads/block_zal.png');
+  width: 331px;
+  height: 41px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.view__btn_open a {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 45.88px;
+}
+
+.view__btn_open a::after {
+  content: "";
+  position: absolute;
+  background-image: url("https://moovieer.com/wp-content/uploads/zoom.png");
+  width: 32px;
+  height: 17px;
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
+.view__btn {
+  margin-left: 16px;
+  background-color: #ffffff;
+  color: #004f72;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40.5px;
+  letter-spacing: 1.37px;
+  font-size: 22px;
+  letter-spacing: 1.48px;
+}
+
+.view__btn button {
+  display: block;
+  line-height: 45.88px;
+  padding: 0px 27px;
+  background-color: transparent;
+  text-align: center;
+}
 
 
 /* Speaker - 2 Block */
 .speaker {
   max-width: 1607px;
   margin: 0 auto;
-  margin-bottom: 244px;
+  margin-bottom: 100px;
 }
 
 .speaker__title {
   color: #004f72;
-  font-family: "DaxlinePro";
+
   font-weight: 800;
   font-style: normal;
   font-size: 71px;
-  /* line-height: 176.15px; */
-  /* line-height: 0; */
+  margin-top: 100px;
   margin-bottom: 123px;
   letter-spacing: 1.11px;
 }
 
-.speaker__slider {}
+.speaker__text {
+  width: 406px;
+  padding: 37px 32px;
+  position: absolute;
+  margin-top: -63px;
+  background-color: #fff;
+  margin-left: 113px;
+}
 
-.speaker__item {}
+.speaker__text-title {
+  color: #004f72;
+  font-size: 26px;
+  font-weight: 1000;
+  letter-spacing: 0.59px;
+  line-height: 33.84px;
+}
 
-.speaker__text {}
-
-.speaker__text-title {}
-
-.speaker__text-subtext {}
+.speaker__text-subtext {
+  color: #004f72;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.33px;
+  line-height: 23.78px;
+}
 
 
 /* Events - 3 Block */
 .events {
   max-width: 1607px;
   margin: 0 auto;
-  margin-bottom: 311px;
+
 }
 
 .events__title {
   width: 904px;
+  margin: 0 7%;
   color: #004f72;
   font-family: 'DaxlinePro';
   font-weight: 800;
   font-style: normal;
-  font-size: 71px;
-  /* line-height: 85.04px; */
+  font-size: 70px;
+  margin-bottom: 168px;
   letter-spacing: 1.48px;
 }
 
-.events__slider {}
-
-.events__item {}
-
-.events__info {}
+.events__info {
+  color: #004f72;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 51.49px;
+  letter-spacing: 0.5px;
+}
 
 
 /* Info about connection */
 .information-connection {
   /* Block info */
   display: block;
-  background-image: url('/img/icons/block_connection.png');
-  background-repeat: no-repeat;
+  background-image: url('https://moovieer.com/wp-content/uploads/block_connection.png');
   background-size: cover;
-  width: 897px;
-  height: 110px;
+  max-width: 930px;
+  height: auto;
   /* Text */
   text-align: center;
-  margin: 0 auto;
+  margin: 311px auto 0 auto;
   margin-bottom: 338px;
   color: #004f72;
-  font-family: "DaxlinePro";
+
   font-size: 35px;
   font-weight: 700;
   line-height: 115.88px;
@@ -236,23 +467,49 @@ body {
 
 /* Description - 4 Block */
 .description {
-  background-image: url('/img/background/bg_description.png');
-  background-size: contain;
+  background-image: url('https://moovieer.com/wp-content/uploads/bg_description.png');
+  /* background-size: contain;
   background-repeat: no-repeat;
-  /* height: 1076px; */
+
+  z-index: -1;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  height: 944px; */
+
+
+  /*background-repeat: no-repeat;*/
+  /*z-index: -1;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*height: 1074px;*/
+}
+
+.bg__description::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://moovieer.com/wp-content/uploads/bg_description.png');
+	background-repeat: no-repeat;
+	/* bottom: 0px; */
+	/* background-position: bottom; */
+	left: 0;
+	right: 0;
+	z-index: -1;
+	background-size: 100%;
 }
 
 .description__title {
   display: block;
   color: #ffffff;
-  font-family: "DaxlinePro";
+
   font-size: 71px;
   font-weight: 700;
   line-height: 45.41px;
   letter-spacing: 3.4px;
-  font-size: 31px;
-  letter-spacing: 1.46px;
-  padding-top: 171px;
+  padding-top: 201px;
   padding-bottom: 64px;
   margin: 0 auto 0 13%;
 }
@@ -264,8 +521,8 @@ body {
 
 .description__text {
   color: #ffffff;
-  font-family: "DaxlinePro";
-  font-size: 24px;
+
+  font-size: 21px;
   font-weight: 300;
   font-style: normal;
   line-height: 35.43px;
@@ -273,12 +530,12 @@ body {
 }
 
 .description__text.margin {
-  margin-top: 67px;
+  margin-top: 47px;
 }
 
 .description__instruction {
-  margin-top: 196px;
-  font-family: "DaxlinePro";
+  margin-top: 236px;
+
   color: #ffffff;
   letter-spacing: 1.27px;
   font-size: 16px;
@@ -297,31 +554,355 @@ body {
 .description__color,
 .href__green {
   color: #b2d234;
-  font-family: "DaxlinePro";
+
   font-weight: normal;
   font-style: normal;
 }
 
 
 /* Contacts - 5 Block */
-.contacts {}
+.contacts__title {
+  text-align: center;
+  margin: 0 auto;
+  color: #004f72;
 
-.contacts__block {}
+  font-weight: 700;
+  line-height: 52.26px;
+  font-size: 41px;
+  letter-spacing: 1.71px;
+  padding-top: 205px;
+  padding-bottom: 52px;
+}
 
-.contacts__title {}
+.contacts__phone a {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  color: #004f72;
 
-.contacts__phone {}
+  font-size: 43px;
+  font-weight: 300;
+  line-height: 70.87px;
+  letter-spacing: 0.89px;
+}
 
-.contacts__text {}
+.contacts__text {
+  max-width: 954px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 213px;
+  color: #004f72;
 
-.href__green {}
+  font-size: 19px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 30.54px;
+}
 
 
 /* Footer */
-.footer {}
+.footer__img {
+  display: table;
+  margin: 0 auto;
+  margin-top: 273px;
+}
 
-.footer__img {}
+.footer__info {
+  padding-top: 111px;
+  padding-bottom: 123px;
+  text-align: center;
+  margin: 0 auto;
+  color: #004f72;
 
-.footer__info {}
+  font-size: 20px;
+  line-height: 29.62px;
+  font-weight: 400;
+  letter-spacing: 0.61px;
+}
 
-.href-green {}
+/* Media */
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+	.view__title {
+		text-align: center;
+		margin: 0 auto;
+		padding-top: 32px;
+		width: 1200px;
+		color: #ffffff;
+		font-size: 63px;
+		font-weight: 400;
+		line-height: 55.02px;
+		letter-spacing: 0.95px;
+	}
+
+	.bg__view::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		/*height: 100%;*/
+		height: 168%;
+		background-image: url(https://moovieer.com/wp-content/uploads/bg_view.png);
+		background-repeat: no-repeat;
+		background-position: unset;
+		/* bottom: 0px; */
+		/* background-position: bottom; */
+		left: 0;
+		right: 0;
+		z-index: -1;
+		background-size: 170%;
+		/* padding-bottom: 60px; */
+	}
+
+	.view__btn_open {
+		background-image: url(https://moovieer.com/wp-content/uploads/block_zal.png);
+		background-size: 100%;
+		 width:unset;
+		height: 64px;
+		padding-right: 30px;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+
+	.view__video-btn {
+		/* display: flex; */
+		/* width: 492px; */
+		padding-top: 30px;
+		margin: 0 auto;
+		display: block;
+		/* margin-bottom: 30px; */
+	}
+
+	.view__btn_flex {
+		display: flex;
+		/* margin-right: 0; */
+		display: table;
+		margin: 0 auto;
+		/* margin-left: auto; */
+	}
+
+	.view__btn {
+		margin-left: 16px;
+		background-color: #ffffff;
+		color: #004f72;
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 40.5px;
+		letter-spacing: 1.37px;
+		font-size: 42px;
+		letter-spacing: 1.48px;
+	}
+
+	.view__btn button {
+		display: block;
+		line-height: 45.88px;
+		padding: 27px 42px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		background-color: transparent;
+		font-size: 36px;
+		text-align: center;
+	}
+
+	.view__btn_open a {
+		color: #ffffff;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 67.88px;
+	}
+
+	.view__btn_open a::after {
+		content: "";
+		position: absolute;
+		background-image: url(https://moovieer.com/wp-content/uploads/zoom.png);
+		margin-top: 23px;
+		margin-left: 10px;
+	}
+  .speaker__slider.slick-initialized.slick-slider {
+    width: 85%;
+    margin: 0 auto;
+  }
+	.header__logo img{
+		width: unset;
+	}
+
+	.speaker__title {
+		margin-top: 150px;
+		margin-left: 0;
+		margin-right: 0;
+	}
+  .events__slider.slick-initialized.slick-slider {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .speaker .slick-list.draggable {
+    height: 965px;
+}
+
+  .speaker__text {
+    margin-left: 0;
+	  padding: 30px 30px;
+  }
+
+  .speaker__text-title {
+	  font-size: 51px;
+	  line-height: unset;
+  }
+
+	.speaker__text-subtext {
+		font-size: 37px;
+		line-height: 31.78px;
+		padding-right: 5px;
+	}
+
+  .events__title {
+    width: unset;
+  }
+
+	.events__info {
+		font-size: 50px;
+		padding-top: 20px;
+		line-height: 50.49px;
+	}
+
+  .information-connection {
+    /*margin: 30px 0;*/
+    /*max-width: unset;*/
+    /*  background-size: 75%;*/
+    /*  background-repeat: no-repeat;*/
+    /*  background-position: center;*/
+    /*  text-align: center;*/
+    /*  font-size: 31px;*/
+
+	  margin: 140px 25px;
+	  /* max-width: 1500px; */
+	  background-size: 95%;
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  text-align: center;
+	  height: 120px;
+	  padding-top: 18px;
+	  font-size: 46px;
+	  line-height: unset;
+
+  }
+
+	.header__logo img {
+		width: 290px;
+	}
+
+
+	.description {
+		padding-bottom: 80px;
+	}
+	.description__title {
+		font-size: 120px;
+	}
+
+	.description__text {
+		font-size: 41px;
+		font-weight: 300;
+		font-style: normal;
+		line-height: 52.43px;
+	}
+
+
+	.description__instruction {
+		margin-top: 186px;
+		color: #ffffff;
+		letter-spacing: 1.27px;
+		font-size: 36px;
+		line-height: 40.88px;
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	.description__color {
+		font-size: 56px;
+		text-indent: -37px;
+		margin-bottom: 20px;
+		display: table-row;
+		position: absolute;
+	}
+
+	.contacts__title {
+		text-align: center;
+		margin: 0 auto;
+		color: #004f72;
+		font-weight: 700;
+		line-height: 52.26px;
+		font-size: 61px;
+		letter-spacing: 1.71px;
+		padding-top: 205px;
+		padding-bottom: 52px;
+		padding: 100px;
+	}
+
+	.contacts__phone a {
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+		color: #004f72;
+		font-size: 83px;
+		font-weight: 300;
+		line-height: 100.87px;
+		letter-spacing: 0.89px;
+	}
+
+	.contacts__text {
+		max-width: 954px;
+		text-align: center;
+		margin: 0 auto;
+		padding: 50px;
+		padding-top: 213px;
+		color: #004f72;
+		font-size: 48px;
+		font-weight: normal;
+		font-style: normal;
+		line-height: 52.54px;
+	}
+
+	.footer__img {
+		display: table;
+		margin: 0 auto;
+		margin-top: 147px;
+	}
+
+	.footer__info {
+		padding: 100px;
+		padding-top: 111px;
+		padding-bottom: 123px;
+		text-align: center;
+		margin: 0 auto;
+		color: #004f72;
+		font-size: 51px;
+		line-height: 51.62px;
+		font-weight: 400;
+		letter-spacing: 0.61px;
+	}
+}
+
+@media screen and (max-width: 1680px) {
+.speaker__slider.slick-initialized.slick-slider {
+	width: 85%;
+	margin: 0 auto;
+}
+}
+
+@media screen and (min-width: 1025px) {
+	.view {
+		height: 100vh;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.speaker__item.slick-slide.slick-current.slick-active {
+		width: 695px !important;
+	}
+}
+
+
+

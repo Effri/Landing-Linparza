@@ -1,3 +1,8 @@
+<?php
+/*
+ Template name: Landing
+*/
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -6,21 +11,22 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
+	
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <?php wp_head(); ?>
 </head>
 
-<body class="container">
-	<!-- View - 1 Block -->
-	<section class="view">
-		<!-- Header -->
-		<div class="bg__view"></div>
+<body class="">
+<!-- View - 1 Block -->
+<section class="view">
+    <!-- Header -->
+    <div class="bg__view"></div>
 		<header class="container header">
 			<div class="header__logo">
-				<img src="img/nav/logo.png" alt="logo">
+				<img src="https://moovieer.com/wp-content/uploads/logo.png" alt="logo">
 			</div>
 			<div class="header__logo">
-				<img class="header__left" src="img/nav/logo_2.png" alt="logo_2">
+				<img class="header__left" src="https://moovieer.com/wp-content/uploads/logo_2.png" alt="logo_2">
 			</div>
 		</header>
 		<h1 class="container view__title">
@@ -38,10 +44,10 @@
 
 	<!-- Speaker - 2 Block -->
 	<section class="speaker">
-		<h1 class="container speaker__title">СПИКЕРЫ</h1>
+		<h1 class="speaker__title">СПИКЕРЫ</h1>
 		<div class="speaker__slider">
 			<div class="speaker__item">
-				<img src="img/speaker/Nechushkina.png" alt="Nechushkina">
+				<img src="https://moovieer.com/wp-content/uploads/Nechushkina.png" alt="Nechushkina">
 				<div class="speaker__text">
 					<div class="speaker__text-title">Нечушкина Валентина Михайловна
 					</div>
@@ -52,7 +58,7 @@
 				</div>
 			</div>
 			<div class="speaker__item">
-				<img src="img/speaker/Demidova.png" alt="Demidova">
+				<img src="https://moovieer.com/wp-content/uploads/Demidova.png" alt="Demidova">
 				<div class="speaker__text">
 					<div class="speaker__text-title">Демидова Ирина Анатольевна
 					</div>
@@ -62,7 +68,7 @@
 				</div>
 			</div>
 			<div class="speaker__item">
-				<img src="img/speaker/Nechushkina.png" alt="Nechushkina">
+				<img src="https://moovieer.com/wp-content/uploads/Nechushkina.png" alt="Nechushkina">
 				<div class="speaker__text">
 					<div class="speaker__text-title">Нечушкина Валентина Михайловна</div>
 					<div class="speaker__text-subtext">Д.м.н., Заместитель директора Института онкогинекологии и
@@ -72,7 +78,7 @@
 				</div>
 			</div>
 			<div class="speaker__item">
-				<img src="img/speaker/Demidova.png" alt="Demidova">
+				<img src="https://moovieer.com/wp-content/uploads/Demidova.png" alt="Demidova">
 				<div class="speaker__text">
 					<div class="speaker__text-title">Демидова Ирина Анатольевна
 					</div>
@@ -89,19 +95,19 @@
 		<h1 class="events__title">ПОСМОТРЕТЬ ПРОШЕДШИЕ МЕРОПРИЯТИЯ</h1>
 		<div class="events__slider">
 			<div class="events__item">
-				<img src="img/events/video_1.png" alt="video_1">
+				<img src="https://moovieer.com/wp-content/uploads/video_1.png" alt="video_1">
 				<div class="events__info">Запись меропрятия 30.06</div>
 			</div>
 			<div class="events__item">
-				<img src="img/events/video_2.png" alt="video_2">
+				<img src="https://moovieer.com/wp-content/uploads/video_2.png" alt="video_2">
 				<div class="events__info">Запись меропрятия 7.07</div>
 			</div>
 			<div class="events__item">
-				<img src="img/events/video_1.png" alt="video_1">
+				<img src="https://moovieer.com/wp-content/uploads/video_1.png" alt="video_1">
 				<div class="events__info">Запись меропрятия 30.06</div>
 			</div>
 			<div class="events__item">
-				<img src="img/events/video_2.png" alt="video_2">
+				<img src="https://moovieer.com/wp-content/uploads/video_2.png" alt="video_2">
 				<div class="events__info">Запись меропрятия 7.07</div>
 			</div>
 		</div>
@@ -111,6 +117,7 @@
 
 	<!-- Description - 4 Block -->
 	<section class="description">
+        <div class="bg__description"></div>
 		<h1 class="description__title">Линпарза®</h1>
 		<div class="description__about">
 			<div class="description__text">– единственный PARP-ингибитор, одобренный
@@ -159,7 +166,7 @@
 	<!-- Footer -->
 	<footer class="footer">
 		<div class="footer__img">
-			<img src="img/nav/logo_3.png" alt="logo_3">
+			<img src="https://moovieer.com/wp-content/uploads/logo_3.png" alt="logo_3">
 		</div>
 		<div class="footer__info">ООО «АстраЗенека Фармасьютикалз»<br>
 			Россия 123112, Москва, 1-й Красногвардейский проезд, д.21 стр. 1<br>
@@ -178,8 +185,8 @@
 			$('.speaker__slider').slick({
 				infinite: true,
   				speed: 300,
-				prevArrow: '<div class="prev speaker"><img src="/img/icons/arrow_left.png" alt=""></div>',
-				nextArrow: '<div class="next speaker"><img src="/img/icons/arrow_right.png" alt=""></div>',
+				prevArrow: '<div class="prev speaker"><img src="https://moovieer.com/wp-content/uploads/arrow_left.png" alt=""></div>',
+				nextArrow: '<div class="next speaker"><img src="https://moovieer.com/wp-content/uploads/arrow_right.png" alt=""></div>',
 				// slidesToShow: 2,
 				// slidesToScroll: 2,
 				responsive: [
@@ -226,8 +233,8 @@
 				infinite: true,
 				// slidesToShow: 2,
 				// slidesToScroll: 2,
-				prevArrow: '<div class="prev events"><img src="/img/icons/arrow_left.png" alt=""></div>',
-				nextArrow: '<div class="next events"><img src="/img/icons/arrow_right.png" alt=""></div>',
+				prevArrow: '<div class="prev events"><img src="https://moovieer.com/wp-content/uploads/arrow_left.png" alt=""></div>',
+				nextArrow: '<div class="next events"><img src="https://moovieer.com/wp-content/uploads/arrow_right.png" alt=""></div>',
 				responsive: [
 				{
 						breakpoint: 3440,
@@ -270,6 +277,5 @@
 
 </body>
 
-</body>
 
 </html>
