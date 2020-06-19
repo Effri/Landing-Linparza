@@ -633,7 +633,7 @@ input[type="time"],
 input[type="datetime-local"],
 input[type="week"],
 input[type="month"],
-input[type="text"],
+/*input[type="text"],*/
 input[type="email"],
 input[type="url"],
 input[type="password"],
@@ -647,6 +647,10 @@ textarea {
 	border-radius: 2px;
 	color: #686868;
 	padding: 0.625em 0.4375em;
+	width: 100%;
+}
+
+input[type="text"] {
 	width: 100%;
 }
 
@@ -666,6 +670,7 @@ textarea:focus {
 	background-color: #fff;
 	border-color: #007acc;
 	color: #1a1a1a;
+	/*padding-left: 22px;*/
 	outline: 0;
 }
 
@@ -4144,6 +4149,7 @@ img {
   vertical-align: top;
 }
 
+
 /* Slick SLider */
 
 .slick-initialized.slick-slider {
@@ -4284,6 +4290,21 @@ body {
   }
 }
 
+.header {
+	padding-top: 42px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header__logo {
+	display: contents;
+}
+
+.header .header__logo:last-child {
+	display: block;
+	float: right;
+}
+
 .view {
   /*background-image: url('https://moovieer.com/wp-content/uploads/bg_view.png');*/
   /*!* background-repeat: no-repeat; *!*/
@@ -4295,25 +4316,72 @@ body {
 
 
 .bg__view::before {
+	/*content: "";*/
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*background-image: url('https://moovieer.com/wp-content/uploads/bg_view.png');*/
+	/*background-repeat: no-repeat;*/
+	/*!* bottom: 0px; *!*/
+	/* background-position: bottom;*/
+	/*left: 0;*/
+	/*right: 0;*/
+	/*z-index: -1;*/
+	/*background-size: 100%;*/
+
+	/*content: "";*/
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*height: 185%;*/
+	/*background-image: url('https://moovieer.com/wp-content/uploads/bg_view.png');*/
+	/*background-repeat: no-repeat;*/
+	/*!* bottom: 0px; *!*/
+	/*!* background-position: bottom; *!*/
+	/*left: 0;*/
+	/*right: 0;*/
+	/*z-index: -1;*/
+	/*background-size: 100%;*/
+
+	position: absolute;
+	background: url(https://moovieer.com/wp-content/uploads/bg_view.png) no-repeat 50% 50%;
+	background-size: cover;
+	height: 100vh;
+}
+
+.view-main {
+	height: 100vh;
+}
+
+.bg__view-main  {
+	/*content: "";*/
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*background-image: url(https://moovieer.com/wp-content/uploads/bg_view.png);*/
+	/*background-repeat: no-repeat;*/
+	/*left: 0;*/
+	/*right: 0;*/
+	/*z-index: -1;*/
+	/*background-size: 100%;*/
+
+	/*content: "";*/
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
 	content: "";
 	position: absolute;
 	width: 100%;
-	height: 100%;
-	background-image: url('https://moovieer.com/wp-content/uploads/bg_view.png');
-	background-repeat: no-repeat;
-	/* bottom: 0px; */
-	 background-position: bottom;
-	left: 0;
-	right: 0;
+	background: url(https://moovieer.com/wp-content/uploads/bg_view.png) no-repeat 50% 50%;
+	background-size: cover;
 	z-index: -1;
-	background-size: 100%;
+	height: 100vh;
 }
-
 
 .view__title {
   text-align: center;
   margin: 0 auto;
   padding-top: 32px;
+	padding-bottom: 15px;
   width: 1200px;
   color: #ffffff;
   font-size: 43px;
@@ -4328,19 +4396,11 @@ body {
   margin-left: auto;
 }
 
-.header {
-  padding-top: 42px;
-}
-
-.header__logo {
-  display: contents;
-}
-
-
-
-.header .header__logo:last-child {
-  display: block;
-  float: right;
+.view__btn_center {
+	display: flex;
+	margin-right: 0;
+	justify-content: space-between;
+	margin-left: auto;
 }
 
 .view__video-btn {
@@ -4384,19 +4444,154 @@ body {
   letter-spacing: 1.48px;
 }
 
+.view__btn-center {
+	background-color: #ffffff;
+	color: #004f72;
+	font-size: 20px;
+	width: 288px;
+	/* width: 90%; */
+	font-weight: 300;
+	line-height: 40.5px;
+	letter-spacing: 1.37px;
+	font-size: 22px;
+	letter-spacing: 1.48px;
+}
+
+.view__btn-center button {
+	display: block;
+	/* width: 100%; */
+	line-height: 45.88px;
+	padding: 0px 27px;
+	width: inherit;
+	background-color: transparent;
+	text-align: center;
+	color: #004f72;
+	font-size: 25px;
+	text-transform: inherit;
+	font-weight: 500;
+}
+
 .view__btn button {
   display: block;
   line-height: 45.88px;
   padding: 0px 27px;
   background-color: transparent;
   text-align: center;
+	color: #004f72;
 }
 
+/* Registration */
+.view__form-registration {
+	max-width: 617px;
+	margin-top: 95px;
+}
+
+.view__input {
+	min-height: 58px;
+	background-color: #ffffff;
+	margin-bottom: 19px;
+	padding-left: 22px;
+}
+
+.view__input::placeholder {
+	color: #004f72;
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 1.25px;
+	line-height: 45.88px;
+	/*padding-left: 22px;*/
+}
+
+.view__input:focus::placeholder {
+	padding-left: 0;
+}
+
+.view__input input[type="text"][disabled]:focus::placeholder {
+	padding-left: 22px;
+}
+
+
+.view__checkbox-block {
+	display: flex;
+}
+
+.view__checkbox-block label {
+	font-size: 18px;
+	font-weight: 400;
+	color: #ffffff;
+	position: relative;
+	padding-top: 3px;
+	padding-bottom: 0px;
+	padding-left: 45px;
+	cursor: pointer;
+	line-height: 27.06px;
+}
+
+.view__checkbox-block.first label {
+	margin-top: 39px;
+	margin-bottom: 58px;
+}
+
+.view__checkbox-block.second label {
+	margin-top: 61px;
+	margin-bottom: 33px;
+}
+
+.view__checkbox-block label input[type=checkbox] {
+	position: absolute; /* prevent taking any space */
+	/* cross-browser hidingg */
+	opactiy: 0;
+	width:0;
+	height:0;
+}
+/* custom checkbox */
+.view__checkbox-block label span {
+	position: absolute;
+	/* position to the free space in <label> */
+	top:0;
+	left:0;
+	width: 29px;
+	height: 29px;
+	background-color: #fff;
+	transition: .3s background-color; /* slight transition */
+}
+/* the check icon */
+.view__checkbox-block label span:after {
+	content: "";
+	position: absolute;
+	display: none;
+	left: 9px;
+	top: 3px;
+	width: 11px;
+	height: 19px;
+	border: 2px solid #004f72;
+	/* border: solid white; */
+	border-width: 3px 0px 0px 3px;
+	transform: rotate(-135deg);
+}
+.view__checkbox-block label:hover span {
+	background-color: #f1f1f1;
+}
+
+/**** Here's the trick ***/
+.view__checkbox-block label input:checked ~ span {
+	background-color: #ffffff;
+}
+.view__checkbox-block label input:checked ~ span:after {
+	display:block;
+}
+
+.view__checkbox-block a {
+	text-decoration-line: underline;
+	text-decoration-color: white;
+	color: #fff;
+}
 
 /* Speaker - 2 Block */
 .speaker {
   max-width: 1607px;
   margin: 0 auto;
+	margin-top: 108px;
   margin-bottom: 100px;
 }
 
@@ -4648,6 +4843,10 @@ body {
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
+	.mob-none {
+		display: none;
+	}
+
 	.view__title {
 		text-align: center;
 		margin: 0 auto;
@@ -4674,7 +4873,9 @@ body {
 		left: 0;
 		right: 0;
 		z-index: -1;
-		background-size: 170%;
+		/*background-size: 170%;*/
+		/*background-size: 200%;*/
+		background-size: 240%;
 		/* padding-bottom: 60px; */
 	}
 
@@ -4753,7 +4954,7 @@ body {
 
 	.speaker__title {
 		margin-top: 150px;
-		margin-left: 0;
+		margin-left: 7%;
 		margin-right: 0;
 	}
   .events__slider.slick-initialized.slick-slider {
@@ -4907,10 +5108,83 @@ body {
 		letter-spacing: 0.61px;
 	}
 
+	.view__btn_center {
+		margin: 0 auto;
+		display: table;
+	}
+
+	.view__btn-center {
+		background-color: #ffffff;
+		color: #004f72;
+		font-size: 20px;
+		width: 410px;
+		/* width: 90%; */
+		font-weight: 300;
+		line-height: 40.5px;
+		letter-spacing: 1.37px;
+		font-size: 22px;
+		letter-spacing: 1.48px;
+		margin-bottom: 15px;
+	}
+
+	.view__btn-center button {
+		display: block;
+		/* width: 100%; */
+		line-height: 45.88px;
+		padding: 10px 27px;
+		width: 100%;
+		/* height: -webkit-fill-available; */
+		background-color: transparent;
+		text-align: center;
+		color: #004f72;
+		font-size: 45px;
+		text-transform: inherit;
+		font-weight: 500;
+	}
+
+	.view__input {
+		min-height: 70px;
+		padding-top: 20px;
+	}
+
+	.view__input::placeholder {
+		color: #004f72;
+		font-size: 50px;
+		font-weight: 300;
+		letter-spacing: 1.25px;
+		/*line-height: 105.88px;*/
+		padding-left: 22px;
+	}
+
+	.view__checkbox-block label {
+		line-height: 40.06px;
+		font-size: 38px;
+	}
+
+	.bg__view-main {
+	/*	content: "";*/
+	/*	position: absolute;*/
+	/*	width: 100%;*/
+	/*	!* height: 100%; *!*/
+	/*	height: 168%;*/
+	/*	background-image: url(https://moovieer.com/wp-content/uploads/bg_view.png);*/
+	/*	background-repeat: no-repeat;*/
+	/*	background-position: unset;*/
+	/*	!* bottom: 0px; *!*/
+	/*	!* background-position: bottom; *!*/
+	/*	left: 0;*/
+	/*	right: 0;*/
+	/*	z-index: -1;*/
+	/*	!* background-size: 170%; *!*/
+	/*	!* background-size: 200%; *!*/
+	/*	background-size: 140%;*/
+	/*	!* padding-bottom: 60px; *!*/
+	/*}*/
 
 	/*.view {*/
 	/*	height: 40vh;*/
-	/*}*/
+	/*	height: 140%;*/
+	}
 }
 
 @media screen and (max-width: 1680px) {
@@ -4920,9 +5194,57 @@ body {
 }
 }
 
+/*@media screen and (min-width: 320px) {*/
+/*	.view {*/
+/*		height: 72vh;*/
+/*	}*/
+/*}*/
+
+
+/*@media screen and (min-width: 375px) {*/
+/*	.view {*/
+/*		height: 85vh;*/
+/*	}*/
+/*}*/
+
+/*@media screen and (min-width: 425px) and (max-width: 767px) {*/
+/*	.view {*/
+/*		height: 96vh !important;*/
+/*	}*/
+/*}*/
+
+@media screen and (min-width: 768px) {
+	/*.view {*/
+	/*	height: 168vh;*/
+	/*}*/
+
+	.speaker {
+		/* position: relative; */
+		/* max-width: 1607px; */
+		/* margin: 0 auto; */
+		margin-bottom: 100px;
+		/*margin-top: 500px;*/
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.view {
+		height: 136vh;
+	}
+
+	.speaker {
+		/* position: relative; */
+		/* max-width: 1607px; */
+		/* margin: 0 auto; */
+		margin-bottom: 100px;
+		/*margin-top: 0px;*/
+	}
+}
+
+
 @media screen and (min-width: 1025px) {
 	.view {
-		height: 100vh;
+		height: 185vh;
 	}
 }
 
