@@ -4349,10 +4349,22 @@ body {
 }
 
 .view-main {
-	height: 100vh;
+	/*height: 100vh;*/
+	height: 1083px;
 }
 
-.bg__view-main  {
+.view-main:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	/*height: 100%;*/
+	height: 1083px;
+	background: url(https://moovieer.com/wp-content/uploads/bg_view.png) no-repeat 50% 50%;
+	background-size: cover;
+	z-index: -1;
+}
+
+.bg__view-main:before  {
 	/*content: "";*/
 	/*position: absolute;*/
 	/*width: 100%;*/
@@ -4368,20 +4380,31 @@ body {
 	/*position: absolute;*/
 	/*width: 100%;*/
 	/*height: 100%;*/
-	content: "";
-	position: absolute;
-	width: 100%;
-	background: url(https://moovieer.com/wp-content/uploads/bg_view.png) no-repeat 50% 50%;
-	background-size: cover;
-	z-index: -1;
-	height: 100vh;
+
+
+	/*content: "";*/
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*background: url(https://moovieer.com/wp-content/uploads/bg_view.png) no-repeat 50% 50%;*/
+	/*background-size: cover;*/
+	/*z-index: -1;*/
+	/*height: 100vh;*/
+
+
+	/*content: "";*/
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*background: url(https://moovieer.com/wp-content/uploads/bg_view.png) no-repeat 50% 50%;*/
+	/*background-size: cover;*/
+	/*z-index: -1;*/
 }
 
 .view__title {
   text-align: center;
   margin: 0 auto;
   padding-top: 32px;
-	padding-bottom: 15px;
+    padding-bottom: 15px;
   width: 1200px;
   color: #ffffff;
   font-size: 43px;
@@ -4397,14 +4420,15 @@ body {
 }
 
 .view__btn_center {
-	display: flex;
-	margin-right: 0;
-	justify-content: space-between;
-	margin-left: auto;
+    display: flex;
+    margin-right: 0;
+    justify-content: space-between;
+    margin-left: auto;
 }
 
 .view__video-btn {
   display: flex;
+	margin-bottom: 106px;
 }
 
 .view__btn_open {
@@ -4445,11 +4469,11 @@ body {
 }
 
 .view__btn-center {
-	background-color: #ffffff;
-	color: #004f72;
-	font-size: 20px;
-	width: 288px;
-	/* width: 90%; */
+    background-color: #ffffff;
+    color: #004f72;
+    font-size: 20px;
+    width: 288px;
+    /* width: 90%; */
 	font-weight: 300;
 	line-height: 40.5px;
 	letter-spacing: 1.37px;
@@ -5127,7 +5151,13 @@ body {
 		margin-bottom: 15px;
 	}
 
-	.view__btn-center button {
+	a.view__btn-center-href {
+		width: inherit;
+	}
+
+	.view__btn-center button,
+	.view__btn-center a
+	{
 		display: block;
 		/* width: 100%; */
 		line-height: 45.88px;
@@ -5141,6 +5171,8 @@ body {
 		text-transform: inherit;
 		font-weight: 500;
 	}
+
+
 
 	.view__input {
 		min-height: 70px;
@@ -5253,6 +5285,49 @@ body {
 	/*	width: 695px !important;*/
 	/*}*/
 }
+.view__btn-center1 {
+	background-color: #ffffff;
+	color: #004f72;
+	font-size: 20px;
+	width: 100%;
+	font-weight: 300;
+	line-height: 40.5px;
+	letter-spacing: 1.37px;
+	font-size: 22px;
+	letter-spacing: 1.48px;
+}
+.view__btn-center1 .load-photo-reg {
+	display: block;
+	width: 100% !important;
+	line-height: 45.88px;
+	padding: 0px 27px;
+	width: inherit;
+	background-color: transparent;
+	text-align: center;
+	color: #004f72;
+	font-size: 25px;
+	text-transform: inherit;
+	font-weight: 500;
+}
 
+.content__photo {
+	margin: 0 auto;
+	display: table;
+	/*color: #fff;*/
+}
 
+.view__btn-center1 button.load-photo-reg[disabled]:hover,
+.view__btn-center1 button.load-photo-reg[disabled] {
+	display: block;
+	width: 100% !important;
+	line-height: 45.88px;
+	padding: 0px 27px;
+	width: inherit;
+	background-color: #00000030;
+	text-align: center;
+	color: #004f72;
+	font-size: 25px;
+	text-transform: inherit;
+	font-weight: 500;
+}
 

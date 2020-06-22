@@ -1,6 +1,12 @@
 <?php
+    if(!is_user_logged_in()) {
+    wp_redirect( 'https://moovieer.com/authorize/' );
+    exit;
+    } 
+?>
+<?php
 /*
- Template name: LandingPage
+ Template name: LandingPage12
 */
 ?>
 <!DOCTYPE html>
@@ -18,9 +24,9 @@
 
 <body class="">
 <!-- View - 1 Block -->
-<section class="view">
+<section class="view-main">
     <!-- Header -->
-    <div class="bg__view"></div>
+    <div class="bg__view-main"></div>
 		<header class="container header">
 			<div class="header__logo">
 				<img src="https://moovieer.com/wp-content/uploads/logo.png" alt="logo">
@@ -39,7 +45,10 @@
 		<h1 class="container view__title">
 			2020 – год прорыва в лечении <i>BRCA</i> - ассоциированных опухолей женской репродуктивной системы
 		</h1>
-		<div class="view__video"></div>
+		<div class="view__video">
+ 		<script src="https://broadcast.comdi.com/player/js/embed.min.js"
+	data-comdi-event="ehngncnu"></script>
+		</div>
 		<div class="container view__video-btn">
 			<div class="view__btn_open"><a href="">Вход в зрительный зал</a></div>
 			<div class="view__btn_flex">

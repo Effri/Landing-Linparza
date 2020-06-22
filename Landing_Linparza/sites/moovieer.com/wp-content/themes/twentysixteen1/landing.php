@@ -1,6 +1,6 @@
 <?php
 /*
- Template name: Landing
+ Template name: LandingAuthor
 */
 ?>
 <!DOCTYPE html>
@@ -30,35 +30,39 @@
 				<img class="header__left" src="https://moovieer.com/wp-content/uploads/logo_2.png" alt="logo_2">
 			</div>
 		</header>
-    <form action="" class="container view__form-registration">
-        <input type="text" class="view__input" placeholder="Имя">
-        <input type="text"class="view__input" placeholder="Фамилия">
+    <form class="container view__form-registration">
+        <input type="text" name="" class="view__input" placeholder="Имя">
+        <input type="text" name="" class="view__input" placeholder="Фамилия">
+<!--         <div class="view__checkbox-block">
+            <label>Я согласен с обработкой данных, предоставленных мною выше.
+                <input type="checkbox" id="processing" onchange="document.getElementById('agreement').disabled = !this.checked;" />
+                <span></span>
+            </label>
+        </div>
+         <div class="view__btn_center">
+            				<div class="view__btn-center"><button class="make-photo">Сделать фото</button></div>
+            				<div class="view__btn-center"><button class="load-photo">Загрузить фото</button></div>
+        </div> -->
+<!--         <div class="view__checkbox-block second">
+                <label>Согласен на использование своего изображения в рамках мероприятия. <a href="" class="agreement">Cоглашение</a>
+                    <input type="checkbox" id="agreement" onchange="document.getElementById('specialist').disabled = !this.checked;" />
+                    <span></span>
+                </label>
+        </div>
         <div class="view__checkbox-block first">
             <label>Я подтверждаю, что являюсь специалистом здравоохранения.
                 <input type="checkbox" id="specialist" />
                 <span></span>
             </label>
-        </div>
-        <div class="view__btn_center">
-            				<div class="view__btn-center"><button class="make-photo">Сделать фото</button></div>
-            				<div class="view__btn-center"><button class="load-photo">Загрузить фото</button></div>
-            			</div>
-        <div class="view__checkbox-block second">
-                <label>Согласен на использование своего изображения в рамках мероприятия. <a href="" class="agreement">Cоглашение</a>
-                    <input type="checkbox" id="agreement" />
-                    <span></span>
-                </label>
-        </div>
-        <div class="view__checkbox-block">
-            <label>Я согласен с обработкой данных, предоставленных мною выше.
-                <input type="checkbox" id="processing" />
-                <span></span>
-            </label>
-        </div>
+        </div> -->
     </form>
+    <div style="margin-left: auto; margin-right: auto;" class="container view__form-registration view__btn_center">
+            <div class="view__btn-center"><button class="make-photo">Войти</button></div>
+            <div class="view__btn-center"><a class="view__btn-center-href" style="width: inherit;" href="/reg2/"> <button type="test" id="rand" class="load-photo">Регистрация</button></a></div>
+        </div>
 	</section>
 
 </body>
-
+<?php //wp_footer(); ?>
 
 </html>
