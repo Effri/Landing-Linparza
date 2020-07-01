@@ -4,7 +4,7 @@
 */
 ?>
 <!DOCTYPE html>
-<html lang="ru">
+<html style="height: 100%;" lang="ru">
 
 <head>
 	<title>Landing Linparza</title>
@@ -16,11 +16,11 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="">
+<body style="height: 100%;" class="">
 <!-- View - 1 Block -->
-<section class="view-main">
+<section class="view-main-three1">
     <!-- Header -->
-    <div class="bg__view-main"></div>
+<!--    <div class="bg__view-main"></div>-->
 		<header class="container header">
 			<div class="header__logo">
 				<img src="https://moovieer.com/wp-content/uploads/logo.png" alt="logo">
@@ -30,7 +30,7 @@
 				<img class="header__left" src="https://moovieer.com/wp-content/uploads/logo_2.png" alt="logo_2">
 			</div>
 		</header>
-    <form class="container view__form-registration">
+    <form class="container view__form-registration1">
 <!--         <input type="text" name="" class="view__input" placeholder="Имя">
         <input type="text" name="" class="view__input" placeholder="Фамилия"> -->
 <!--         <div class="view__checkbox-block">
@@ -61,26 +61,31 @@
             <div class="view__btn-center"><button id="showContent" class="load-photo">Регистрация</button></div>
         </div>
     <div> -->
+    <div class="container photo__center">Уважаемый
+        коллега! Для участия в мероприятии,
+        пожалуйста, загрузите свое фото. Так вы
+        сможете оставить себе память об этом дне.</div>
     <div class="container">
-            <div class="view__btn-center" style="margin: 0 auto; margin-bottom: 30px"><button class="make-photo"><a href="https://moovieer.com" >Главная</a></button></div>
+            <div class="view__btn-center2" style="margin: 0 auto; margin-bottom: 30px"><button class="make-photo"><a href="https://moovieer.com" >Вход на сайт</a></button></div>
     </div>
 
         <div id="content" class="content__photo">
         <?php echo do_shortcode( '[gravityform id="1"]' ); ?>
         </div>
         <div id="content1" class="content__photo">
+<!--            <div class="load-file-five">Загрузите фотографии до 5шт.</div>-->
             <form id="featured_upload" method="post" action="#" enctype="multipart/form-data">
             <input type="file" name="my_image_upload" id="my_image_upload"  multiple="false" />
-            <input type="hidden" name="post_id" id="post_id" value="55" />
+            <input class="view__btn-center" type="hidden" name="post_id" id="post_id" value="55" />
             <?php wp_nonce_field( 'my_image_upload', 'my_image_upload_nonce' ); ?>
-            <input id="submit_my_image_upload" name="submit_my_image_upload" type="submit" value="Отправить" />
+            <input class="view__btn-center" id="submit_my_image_upload" name="submit_my_image_upload" type="submit" value="Загрузить" />
         </form>
             <?php
         // Проверим защиту nonce и что пользователь может редактировать этот пост.
         if ( 
             isset( $_POST['my_image_upload_nonce'], $_POST['post_id'] ) 
             && wp_verify_nonce( $_POST['my_image_upload_nonce'], 'my_image_upload' )
-            && current_user_can( 'edit_post', $_POST['post_id'] )
+            //&& current_user_can( 'edit_post', $_POST['post_id'] )
         ) {
             // все ок! Продолжаем.
             // Эти файлы должны быть подключены в лицевой части (фронт-энде).
@@ -95,26 +100,27 @@
             if ( is_wp_error( $attachment_id ) ) {
                 echo "Ошибка загрузки медиафайла.";
             } else {
-                echo "Медиафайл был успешно загружен!";
+                echo "<script> window.location.replace('http://moovieer.com/'); </script>";
+                exit;
             }
 
         } else {
-            echo "Проверка не пройдена. Невозможно загрузить файл.";
+//            echo "Загрузите фотографии до 5шт.";
         }
         ?>
-        <style>
-            button, button[disabled]:hover, button[disabled]:focus, input[type="button"], input[type="button"][disabled]:hover, input[type="button"][disabled]:focus, input[type="reset"], input[type="reset"][disabled]:hover, input[type="reset"][disabled]:focus, input[type="submit"], input[type="submit"][disabled]:hover, input[type="submit"][disabled]:focus {
-            background: #1a1a1a;
-            border: 0;
-            border-radius: 2px;
-            color: #fff;
-            font-weight: 700;
-            letter-spacing: 0.046875em;
-            line-height: 1;
-            padding: 0.84375em 0.875em 0.78125em;
-            text-transform: uppercase;
-        }
-        </style>
+<!--        <style>-->
+<!--            button, button[disabled]:hover, button[disabled]:focus, input[type="button"], input[type="button"][disabled]:hover, input[type="button"][disabled]:focus, input[type="reset"], input[type="reset"][disabled]:hover, input[type="reset"][disabled]:focus, input[type="submit"], input[type="submit"][disabled]:hover, input[type="submit"][disabled]:focus {-->
+<!--            background: #1a1a1a;-->
+<!--            border: 0;-->
+<!--            border-radius: 2px;-->
+<!--            color: #fff;-->
+<!--            font-weight: 700;-->
+<!--            letter-spacing: 0.046875em;-->
+<!--            line-height: 1;-->
+<!--            padding: 0.84375em 0.875em 0.78125em;-->
+<!--            text-transform: uppercase;-->
+<!--        }-->
+<!--        </style>-->
         </div>
 	</section>
 </body>

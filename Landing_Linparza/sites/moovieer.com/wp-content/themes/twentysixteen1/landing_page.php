@@ -47,6 +47,7 @@
 				<div class="view__btn"><button class="load-photo">Загрузить фото</button></div>
 			</div>
 		</div>
+    
 	</section>
 
 	<!-- Speaker - 2 Block -->
@@ -153,6 +154,7 @@
 			<div class="contacts__phone">
 				<a href="tel:8(495)123-45-67">8 (495) 123-45-67</a>
 				<a href="tel:8(495)123-45-67">8 (495) 123-45-67</a>
+                <a href="tel:8(800)250-55-29">8 (800) 250-55-29</a>
 			</div>
 			<div class="contacts__text">Материал предназначен для специалистов здравоохранения. Имеются
 				противопоказания.<br>

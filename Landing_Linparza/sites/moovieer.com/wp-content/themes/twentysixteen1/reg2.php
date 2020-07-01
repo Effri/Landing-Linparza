@@ -29,9 +29,9 @@
 
 <body class="">
 <!-- View - 1 Block -->
-<section class="view-main">
+<section class="view">
     <!-- Header -->
-    <div class="bg__view-main"></div>
+<!--    <div class="bg__view-main"></div>-->
 		<header class="container header">
 			<div class="header__logo">
 				<img src="https://moovieer.com/wp-content/uploads/logo.png" alt="logo">
@@ -42,9 +42,11 @@
 			</div>
 		</header>
     <form action="" method="post" name="myForm" class="container view__form-registration" id="form">
-        <input type="text" name="frname" class="view__input" placeholder="Имя">
-        <input type="text" name="laname" class="view__input" placeholder="Фамилия">
-        <div class="view__checkbox-block">
+        <input name="" type="text" id="name" class="view__input" onKeyUp="translit()" placeholder="Имя"/>
+        <input name="" type="text" id="name2" class="view__input" onKeyUp="translit1()" placeholder="Фамилия"/>
+        <input type="hidden" id="frname1" name="frname1" class="view__input" placeholder="Имя">
+        <input type="hidden" id="laname1" name="laname1" class="view__input" placeholder="Фамилия">
+        <div class="view__checkbox-block frst">
             <label for="processing">Я согласен с обработкой данных, предоставленных мною выше.
                 <input type="checkbox" id="processing" onchange="document.getElementById('agreement').disabled = !this.checked;" />
 <!--                <input type="checkbox" id="processing" />-->
@@ -68,8 +70,8 @@
                 <span></span>
             </label>
         </div>
-        <div class="view__btn_center">
-            <div class="view__btn-center1"><button id="btnsbm" type="submit" class="load-photo-reg" disabled >Регистрация</button></div>
+        <div class="view__btn_center__reg">
+            <div class="view__btn-center1"><button id="btnsbm" type="submit" class="load-photo-reg" disabled >Войти</button></div>
         </div>
     </form>
 	</section>
@@ -85,6 +87,60 @@
         else $('.load-photo-reg').attr('disabled', true);
     });
 
+</script>
+<script>
+function translit() {
+    var str = document.getElementById("name").value;
+    var space = '-';
+    var link = '';
+    var transl = {
+        'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'e', 'ж': 'zh',
+        'з': 'z', 'и': 'i', 'й': 'j', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n',
+        'о': 'o', 'п': 'p', 'р': 'r','с': 's', 'т': 't', 'у': 'u', 'ф': 'f', 'х': 'h',
+        'ц': 'c', 'ч': 'ch', 'ш': 'sh', 'щ': 'sh','ъ': space,
+        'ы': 'y', 'ь': space, 'э': 'e', 'ю': 'yu', 'я': 'ya'
+    }
+if (str != '')
+    str = str.toLowerCase();
+ 
+for (var i = 0; i < str.length; i++){
+    if (/[а-яё]/.test(str.charAt(i))){ // заменяем символы на русском
+        link += transl[str.charAt(i)];
+    } else if (/[a-z0-9]/.test(str.charAt(i))){ // символы на анг. оставляем как есть
+        link += str.charAt(i);
+    } else {
+        if (link.slice(-1) !== space) link += space; // прочие символы заменяем на space
+    }
+}
+    document.getElementById("frname1").value = link;
+}
+</script>
+<script>
+function translit1() {
+    var str = document.getElementById("name2").value;
+    var space = '-';
+    var link = '';
+    var transl = {
+        'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'e', 'ж': 'zh',
+        'з': 'z', 'и': 'i', 'й': 'j', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n',
+        'о': 'o', 'п': 'p', 'р': 'r','с': 's', 'т': 't', 'у': 'u', 'ф': 'f', 'х': 'h',
+        'ц': 'c', 'ч': 'ch', 'ш': 'sh', 'щ': 'sh','ъ': space,
+        'ы': 'y', 'ь': space, 'э': 'e', 'ю': 'yu', 'я': 'ya'
+    }
+if (str != '')
+    str = str.toLowerCase();
+ 
+for (var i = 0; i < str.length; i++){
+    if (/[а-яё]/.test(str.charAt(i))){ // заменяем символы на русском
+        link += transl[str.charAt(i)];
+    } else if (/[a-z0-9]/.test(str.charAt(i))){ // символы на анг. оставляем как есть
+        link += str.charAt(i);
+    } else {
+        if (link.slice(-1) !== space) link += space; // прочие символы заменяем на space
+    }
+}
+    document.getElementById("laname1").value = link;
+}
 </script>
 </body>
 
