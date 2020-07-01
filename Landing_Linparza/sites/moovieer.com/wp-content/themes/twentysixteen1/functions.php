@@ -586,3 +586,162 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+
+/* add_action( 'init', 'blockusers_init' );
+function blockusers_init() {
+if ( is_admin() && ! current_user_can( 'administrator' ) &&
+! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
+wp_redirect( home_url() );
+exit();
+}
+}
+
+ if ( ! current_user_can( 'manage_options' ) ) {
+	show_admin_bar( false );
+}
+ */
+/* function only_admin()
+{
+if ( ! current_user_can( 'manage_options' ) && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF'] ) {
+                wp_redirect( site_url() );
+    }
+}
+add_action( 'admin_init', 'only_admin', 1 ); */
+
+
+/* //add this within functions.php
+function ajax_login_init(){
+
+    wp_register_script('ajax-login-script', get_template_directory_uri() . '/ajax-login-script.js', array('jquery') ); 
+    wp_enqueue_script('ajax-login-script');
+
+    wp_localize_script( 'ajax-login-script', 'ajax_login_object', array( 
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        'redirecturl' => home_url(),
+        'loadingmessage' => __('Sending user info, please wait...')
+    ));
+
+    // Enable the user with no privileges to run ajax_login() in AJAX
+    add_action( 'wp_ajax_nopriv_ajaxlogin', 'ajax_login' );
+}
+
+// Execute the action only if the user isn't logged in
+if (!is_user_logged_in()) {
+    add_action('init', 'ajax_login_init');
+} */
+
+
+/* function ajax_login(){
+
+    // First check the nonce, if it fails the function will break
+    check_ajax_referer( 'ajax-login-nonce', 'security' );
+
+    // Nonce is checked, get the POST data and sign user on
+    $info = array();
+    $info['user_login'] = $_POST['username'];
+    $info['user_password'] = $_POST['password'];
+    $info['remember'] = true;
+
+    $user_signon = wp_signon( $info, false );
+    if ( is_wp_error($user_signon) ){
+        echo json_encode(array('loggedin'=>false, 'message'=>__('Wrong username or password.')));
+    } else {
+        echo json_encode(array('loggedin'=>true, 'message'=>__('Login successful, redirecting...')));
+    }
+
+    die();
+} */
+add_action('init','create_account');
+function create_account(){
+    //You may need some data validation here
+    $frname = ( isset($_POST['frname1']) ? $_POST['frname1'] : '' );
+    $lanme = ( isset($_POST['laname1']) ? $_POST['laname1'] : '' );
+    $user = $frname . $lanme; //( isset($_POST['uname']) ? $_POST['uname'] : '' );
+    $pass = ( isset($_POST['upass']) ? $_POST['upass'] : '' );
+    $email = $user . "@linparza.com";//( isset($_POST['uemail']) ? $_POST['uemail'] : '' );
+    if ( username_exists( $user ) )
+	echo "<script>alert('Такой пользователь уже зарегистрирован, пожалуйста, авторизуйтесь')</script>";
+
+    if ( !username_exists( $user )  && !email_exists( $email ) ) {
+       $user_id = wp_create_user( $user, $pass, $email );
+       if( !is_wp_error($user_id) ) {
+           //user has been created
+           $user = new WP_User( $user_id );
+           $user->set_role( 'contributor' );
+            wp_update_user(array('ID' => $user_id, 'first_name' => $frname, 'last_name' => $lanme));
+            wp_set_current_user($user_id); // set the current wp user
+            wp_set_auth_cookie($user_id); // start the cookie for the current registered user
+           //Redirect
+           wp_redirect( '/photo' );
+           exit;
+       } 
+       else {
+                //echo "<script>console.log('Такой пользователь уже есть, авторизуйтесь!')</script>";
+            //echo "<script>alert('Такой пользователь уже есть, авторизуйтесь!')</script>";
+           //$user_id is a WP_Error object. Manage the error
+       }
+    }
+
+}
+
+ function username_login(){
+    header('Content-Type: application/json');
+    $username1 = $_POST['frname'];
+    $username2 = $_POST['laname'];
+    $username = $username1 . $username2;
+    $user1 = get_user_by('login', $username );
+    
+/*          if ( username_exists( $username ) )
+        echo json_encode(array('errorcode' => 1)); */
+/*         if ( is_wp_error( $user1 ) )
+        echo "<script>alert('Такой пользователь не существует, зарегистрируйтесь!')</script>"; */
+         if ( username_exists( $username ) )
+        {
+            wp_clear_auth_cookie();
+            wp_set_current_user ( $user1->ID );
+            wp_set_auth_cookie  ( $user1->ID );
+    
+            //wp_redirect( '/' );
+            echo json_encode(array('errorcode' => 0));
+            exit();
+        } 
+        else {
+            echo json_encode(array('errorcode' => 1));
+            exit();
+        }
+     exit();
+     //wp_redirect( '/' );
+    }
+    add_action('wp_ajax_username_login','username_login');
+    add_action('wp_ajax_nopriv_username_login','username_login');
+
+    add_filter( 'show_admin_bar', '__return_false' ); ?>
+
+<?php function hide_admin_bar_settings() {
+?>
+    <style type="text/css">
+        .show-admin-bar {
+            display: none;
+        }
+    </style>
+<?php
+}
+/* 
+function disable_admin_bar() {
+    add_filter( 'show_admin_bar', '__return_false' );
+    add_action( 'admin_print_scripts-profile.php',
+         'hide_admin_bar_settings' );
+}
+add_action( 'init', 'disable_admin_bar' , 9 ); 
+ */
+## отключаем создание миниатюр файлов для указанных размеров
+add_filter( 'intermediate_image_sizes', 'delete_intermediate_image_sizes' );
+function delete_intermediate_image_sizes( $sizes ){
+	// размеры которые нужно удалить
+	return array_diff( $sizes, [
+		'medium_large',
+		'large',
+		'1536x1536',
+		'2048x2048',
+	] );
+}

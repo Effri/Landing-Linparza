@@ -15,8 +15,24 @@
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <?php wp_head(); ?>
 </head>
-
-<body style="height: 100%;" class="">
+<style>
+    @media screen and (min-width: 44.375em) {
+	body:not(.custom-background-image):before,
+	body:not(.custom-background-image):after {
+        background: none;
+        background-repeat: no-repeat;
+		display: block;
+		height: 21px;
+		left: 0;
+		position: fixed;
+		width: 100%;
+		z-index: 99;
+    }
+} 
+</style>  
+<body style="background: url(https://moovieer.com/wp-content/uploads/fon_1920-1100.png) no-repeat;
+    height: 100%;
+    background-size: cover;" class="">
 <!-- View - 1 Block -->
 <section class="view-main-three1">
     <!-- Header -->
@@ -75,10 +91,13 @@
         <div id="content1" class="content__photo">
 <!--            <div class="load-file-five">Загрузите фотографии до 5шт.</div>-->
             <form id="featured_upload" method="post" action="#" enctype="multipart/form-data">
-            <input type="file" name="my_image_upload" id="my_image_upload"  multiple="false" />
+            <input type="file" name="my_image_upload" id="my_image_upload"/>
+<!--             <input type="file" id="selectedFile" /> -->
+<!--             <input id="ass" type="button" value="Выбрать файлы..." onclick="document.getElementById('my_image_upload').click();" /> -->
             <input class="view__btn-center" type="hidden" name="post_id" id="post_id" value="55" />
             <?php wp_nonce_field( 'my_image_upload', 'my_image_upload_nonce' ); ?>
             <input class="view__btn-center" id="submit_my_image_upload" name="submit_my_image_upload" type="submit" value="Загрузить" />
+            <div id="demo" style="font-weight: 300;"></div>
         </form>
             <?php
         // Проверим защиту nonce и что пользователь может редактировать этот пост.
@@ -101,6 +120,7 @@
                 echo "Ошибка загрузки медиафайла.";
             } else {
                 echo "<script> window.location.replace('http://moovieer.com/'); </script>";
+                echo "Фотография установлена";
                 exit;
             }
 
@@ -124,6 +144,44 @@
         </div>
 	</section>
 </body>
+<!-- <script>
+document.getElementById('miup').onchange = function () {
+    document.getElementById("demo").innerHTML = 'Изображения выбраны, нажмите "Загрузить"';//alert('Изображения выбраны, нажмите "Загрузить" '); //+ this.value);
+};
+</script> -->
+<style>
+    #ass{
+    margin-right: 15px;
+    letter-spacing: 1.48px;
+    /* line-height: 40.5px; */
+    text-transform: inherit !important;
+    /* font-weight: 500; */
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    width: 166px !important;
+    background-color: #fff !important;
+    color: #004f72 !important;
+    width: 250px !important;
+    }
+    .gform_wrapper div.validation_error {
+    margin-top: 50px !important;
+    color: #ffffff !important;
+    font-size: 1em !important;
+    font-weight: 700 !important;
+    margin-bottom: 25px !important;
+    border-top: 2px solid #ffffff !important;
+    border-bottom: 2px solid #ffffff !important;
+    padding: 16px 0 !important;
+    clear: both !important;
+    width: 100% !important;
+    text-align: center !important;
+    }
+    .gform_wrapper .validation_message {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: normal !important;
+    text-align: center !important;
+    }
+    </style>
 <?php wp_footer(); ?>
-
 </html>

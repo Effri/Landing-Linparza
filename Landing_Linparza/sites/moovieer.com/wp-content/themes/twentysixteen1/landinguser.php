@@ -16,7 +16,7 @@
 	<title>Landing Linparza</title>
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
@@ -51,8 +51,17 @@
 	
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <?php wp_head(); ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
-
+<div id="ex1" class="modal">
+  <div> Тут будет текст.
+</br>
+</br>
+</div>
+  <a href="#" rel="modal:close">Закрыть</a>
+</div>
+  
 <body class="">
 <!-- View - 1 Block -->
 <section class="view-main-two">
@@ -111,37 +120,42 @@
 		</div>
     <div class="view__video1">
 		<div class="view__video-btn">
-			<div class="view__btn_open"><a href="">Вход в зрительный зал</a>
+			<div class="view__btn_open"><a href="#ex1" rel="modal:open">Вход в зрительный зал</a>
                 <div class="view__phone1">
                     <div class="view__technical">Телефон технической поддержки</div>
 <!--                    <a href="tel:8(800)250-55-29">8 800 250-55-29</a>-->
                     <div class="phone">8-800-250-55-29</div>
                 </div></div>
 			<div class="view__btn_flex">
-				<div class="view__btn1"><button class="make-photo">Сделать фото</button></div>
-				<div class="view__btn1"><button class="load-photo">Загрузить фото</button></div>
+				<div class="view__btn1"><a href="/photo/"><button class="make-photo">Сделать фото</button></a></div>
+				<!-- <div class="view__btn1"><a href="/photo/"><button class="load-photo">Загрузить фото</button></a></div> -->
 			</div>
 		</div>
 
     </div>
 	</section>
-	<!-- Speaker - 2 Block -->
+    <!-- Speaker - 2 Block -->
+    <section class="speaker1">
+    </section>    
 	<section class="speaker">
 		<h1 class="speaker__title">СПИКЕРЫ</h1>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speaker_5.png" alt="Nechushkina"></div>
-                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speaker_5.png" alt="Nechushkina"></div>
-                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speaker_5.png" alt="Nechushkina"></div>
-                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speaker_5.png" alt="Nechushkina"></div>
-                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speaker_5.png" alt="Nechushkina"></div>
+                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speakers_1.png" alt="Hohlova"></div>
+                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speakers_2.png" alt="Tyulandina"></div>
+                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speakers_3.png" alt="Pokataev"></div>
+                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speakers_4.png" alt="Demidova"></div>
+                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speakers_5-1.png" alt="Nechushkina"></div>
+                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speakers_6.png" alt="Artamonova"></div>
+                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speakers_7.png" alt="Colyadina"></div>
+                <div class="swiper-slide"><img style="width: 450px;" src="https://moovieer.com/wp-content/uploads/speakers_8.png" alt="Zhukova"></div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
             <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
 <!-- 		<div class="speaker__slider">
 			<div class="speaker__item">
                 <img src="https://moovieer.com/wp-content/uploads/speakers_1_2.png" alt="Nechushkina">
@@ -191,20 +205,28 @@
 		<h1 class="events__title">ПОСМОТРЕТЬ ПРОШЕДШИЕ МЕРОПРИЯТИЯ</h1>
 		<div class="events__slider">
 			<div class="events__item">
+                <a href="https://Ваша_Ссылка_на_запись_видео">
 				<img src="https://moovieer.com/wp-content/uploads/video_1.png" alt="video_1">
-				<div class="events__info">Запись меропрятия 30.06</div>
+                <div class="events__info">Запись меропрятия 30.06</div>
+                </a>
 			</div>
 			<div class="events__item">
+                <a href="https://Ваша_Ссылка_на_запись_видео">
 				<img src="https://moovieer.com/wp-content/uploads/video_2.png" alt="video_2">
-				<div class="events__info">Запись меропрятия 7.07</div>
+                <div class="events__info">Запись меропрятия 7.07</div>
+                </a>
 			</div>
 			<div class="events__item">
+                <a href="https://Ваша_Ссылка_на_запись_видео"">
 				<img src="https://moovieer.com/wp-content/uploads/video_1.png" alt="video_1">
-				<div class="events__info">Запись меропрятия 30.06</div>
+                <div class="events__info">Запись меропрятия 30.06</div>
+                </a>
 			</div>
 			<div class="events__item">
+                <a href="https://Ваша_Ссылка_на_запись_видео"">
 				<img src="https://moovieer.com/wp-content/uploads/video_2.png" alt="video_2">
-				<div class="events__info">Запись меропрятия 7.07</div>
+                <div class="events__info">Запись меропрятия 7.07</div>
+                </a>
 			</div>
 		</div>
 	</section>
@@ -268,7 +290,7 @@
 		<div class="footer__info">ООО «АстраЗенека Фармасьютикалз»<br>
 			Россия 123112, Москва, 1-й Красногвардейский проезд, д.21 стр. 1<br>
 			Тел.: +7 (495) 799 56 99, факс: +7 (495) 799 56 98<br>
-			<a href="www.astrazeneca.ru" class="href__green">www.astrazeneca.ru</a>
+			<a href="https://astrazeneca.ru" class="href__green">www.astrazeneca.ru</a>
 		</div>
 	</footer>
 
@@ -283,6 +305,10 @@
       //width: 500,
       spaceBetween: 10,
       // init: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -308,7 +334,7 @@
     });
   </script>
 	<script type="text/javascript">
-		$(document).ready(function () {
+ 		$(document).ready(function () {
 			$('.speaker__slider').slick({
 				infinite: true,
                 slidesToShow: 1,
@@ -354,14 +380,18 @@
 				// 		}
 				// 	},
 				// ]
-			});
-		});
+ 			});
+		}); 
 
-		$(document).ready(function () {
+ 		$(document).ready(function () {
 			$('.events__slider').slick({
 				infinite: true,
 				// slidesToShow: 2,
 				// slidesToScroll: 2,
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                
+                // navigation arrows
 				prevArrow: '<div class="prev events"><img src="https://moovieer.com/wp-content/uploads/arrow_left.png" alt=""></div>',
 				nextArrow: '<div class="next events"><img src="https://moovieer.com/wp-content/uploads/arrow_right.png" alt=""></div>',
 				responsive: [
@@ -514,7 +544,6 @@
             get_timer();
         });
 	</script>
-
 
 
 </body>

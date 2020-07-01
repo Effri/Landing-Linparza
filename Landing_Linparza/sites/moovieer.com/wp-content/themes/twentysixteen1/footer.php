@@ -57,17 +57,41 @@
 					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 				}
 				?>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>" class="imprint">
-					<?php
-					/* translators: %s: WordPress */
-					printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' );
-					?>
-				</a>
 			</div><!-- .site-info -->
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
 </div><!-- .site -->
 
-<?php wp_footer(); ?>
+<?php //wp_footer(); ?>
+<!-- <script>
+jQuery('#username_login').on('submit',function(e){
+    e.preventDefault();
+    var data = jQuery(this).serializeArray();
+    data.push({ name:'action',value:'username_login' });
+    jQuery.ajax({
+        url:">",
+        type: 'POST',
+        dataType: 'json',
+        data:data,
+        success:function(response){
+            if(response.error_code == 1){
+                alert('user cannot login')
+            } else {
+                alert('user logged in');
+                location.reload();
+            }
+        }
+    });
+});
+</script> -->
+<script>
+jQuery('#specialist').click(function(){
+	if (jQuery(this).is(':checked')){
+		jQuery('#btnsbm').removeAttr('disabled');
+	} else {
+		jQuery('#btnsbm').attr('disabled', 'disabled'); 
+	}
+});
+</script>
 </body>
 </html>

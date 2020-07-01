@@ -20,11 +20,48 @@
 	
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     <?php wp_head(); ?>
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+</head> 
+<div id="ex1" class="modal">
+    <div class="grid-container">
+        <div class="Desc"><b style="text-align: center;">Разрешение на использование изображения гражданина</b> </br></br>
 
-<body style="height: 100%;" class="">
+Я, участник мероприятия «2020 – год прорыва в лечении BRCA-ассоциированных опухолей женской репродуктивной системы» (далее также «Пользователь») настоящим даю свое согласие на использование моего фотографического/видео изображения, полученного представителями Организации, с упоминанием моих персональных данных (Ф.И.О.), для следующих целей (как всех одновременно, так и нескольких и любых из них):
+- хранение в базе данных Организации, компании «АстраЗенека ЮК Лимитед» (зарегистрированной по адресу: 2 Kingdom Street, London W2 6BD, England/Англия, Лондон, W2 6BD, Кингдом Стрит, 2), а также любых аффилированных с ними компаний;
+- при необходимости, размещение на корпоративном сайте и любых информационных/промоционных материалах Организации, компании «АстраЗенека ЮК Лимитед» (зарегистрированной по адресу: 2 Kingdom Street, London W2 6BD, England/Англия, Лондон, W2 6BD, Кингдом Стрит, 2), а также любых аффилированных с ними компаний;
+- использование в отношении неограниченного круга лиц в презентациях, выступлениях, докладах, иных публичных выступлениях Организации, компании «АстраЗенека ЮК Лимитед» (зарегистрированной по адресу: 2 Kingdom Street, London W2 6BD, England/Англия, Лондон, W2 6BD, Кингдом Стрит, 2), а также любых аффилированных с ними компаний.
+
+</br></br>
+Настоящее разрешение действует со дня его подтверждения до 14.07.2021 г.
+        </div>
+    <div class="None"></div>
+    <div class="Field">Для ООО «АстраЗенека Фармасьютикалз», зарегистрированного по адресу: 123100, город Москва, 1-й Красногвардейский проезд, дом 21, строение 1, этаж 30, комнаты 13 и 14 (далее по тексту – «Организация»)</div>
+</div>
+</br>
+</br>
+  <a href="#" rel="modal:close">Закрыть</a>
+</div>
+<style>
+    @media screen and (min-width: 44.375em) {
+	body:not(.custom-background-image):before,
+	body:not(.custom-background-image):after {
+        background: none;
+        background-repeat: no-repeat;
+		display: block;
+		height: 21px;
+		left: 0;
+		position: fixed;
+		width: 100%;
+		z-index: 99;
+    }
+} 
+</style>    
+<body style="background: url(https://moovieer.com/wp-content/uploads/fon_1920-1100.png) no-repeat;
+    height: 100%;
+    background-size: cover;" class="">
 <!-- View - 1 Block -->
-<section class="view-main-three1">
+<section class="view-main-three2">
     <!-- Header -->
 <!--    <div class="bg__view"></div>-->
 		<header class="container header">
@@ -94,7 +131,7 @@
             				<div class="view__btn-center"><button class="load-photo">Загрузить фото</button></div>
         </div> -->
         <div class="view__checkbox-block second">
-                <label for="agreement">Согласен на использование своего изображения в рамках мероприятия. <a href="" class="agreement">Cоглашение</a>
+                <label for="agreement">Согласен на использование своего изображения в рамках мероприятия. <a href="#ex1" rel="modal:open" class="agreement">Cоглашение</a>
                     <input type="checkbox" id="agreement" onchange="document.getElementById('specialist').disabled = !this.checked;" disabled/>
 <!--                    <input type="checkbox" id="agreement" disabled />-->
                     <span></span>
